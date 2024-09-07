@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; 
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            max-width: 1200px;
+            width: 100%;
+            padding: 0 15px; 
+            box-sizing: border-box;
+            position: relative; 
+        }
+        .container span {
+            font-weight: bold;
+        }
+        .container > div {
+            flex: 1 1 calc(50% - 20px); 
+            box-sizing: border-box; 
+            padding: 15px;
+        }
+        .vertical-line {
+            position: absolute;
+            top: 0; 
+            left: 50%; 
+            height: 100%;
+            border-left: 1px solid #000; 
+            transform: translateX(-50%); 
+        }
+        .circle {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: red;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .circle1 {
+            top: 5%;
+            left: 50%;
+        }
+        .circle2 {
+            top: 31%;
+            left: 50%;
+        }
+        .circle3 {
+            top: 58%;
+            left: 50%;
+        }
+        .circle4 {
+            top: 84%;
+            left: 50%;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; 
+                align-items: stretch;
+            }
+            
+            .container > div {
+                flex: 1 1 auto; 
+                width: 100%; 
+                margin-bottom: 15px; 
+            }
+            
+            .vertical-line {
+                display: none;
+            }
+
+            .circle {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div><span>1. Lorem ipsum, dolor sit</span><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate obcaecati voluptatibus quia, a repudiandae at vitae inventore qui, eum optio quidem laudantium laborum molestias soluta est hic sapiente voluptate illum?</div>
+        <div><span>2. Lorem ipsum, dolor sit</span><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate obcaecati voluptatibus quia, a repudiandae at vitae inventore qui, eum optio quidem laudantium laborum molestias soluta est hic sapiente voluptate illum?</div>
+        <div><span>3. Lorem ipsum, dolor sit</span><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate obcaecati voluptatibus quia, a repudiandae at vitae inventore qui, eum optio quidem laudantium laborum molestias soluta est hic sapiente voluptate illum?</div>
+        <div><span>4. Lorem ipsum, dolor sit</span><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate obcaecati voluptatibus quia, a repudiandae at vitae inventore qui, eum optio quidem laudantium laborum molestias soluta est hic sapiente voluptate illum?</div>
+        <div><span>5. Lorem ipsum, dolor sit</span><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate obcaecati voluptatibus quia, a repudiandae at vitae inventore qui, eum optio quidem laudantium laborum molestias soluta est hic sapiente voluptate illum?</div>
+        <div><span>6. Lorem ipsum, dolor sit</span><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate obcaecati voluptatibus quia, a repudiandae at vitae inventore qui, eum optio quidem laudantium laborum molestias soluta est hic sapiente voluptate illum?</div>
+        <div><span>7. Lorem ipsum, dolor sit</span><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate obcaecati voluptatibus quia, a repudiandae at vitae inventore qui, eum optio quidem laudantium laborum molestias soluta est hic sapiente voluptate illum?</div>
+        <div><span>8. Lorem ipsum, dolor sit</span><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate obcaecati voluptatibus quia, a repudiandae at vitae inventore qui, eum optio quidem laudantium laborum molestias soluta est hic sapiente voluptate illum?</div>
+        <div class="vertical-line">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+            <div class="circle circle4"></div>
+        </div>
+    </div>
+</body>
+</html>
